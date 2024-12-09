@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <!-- 设置下面这些属性 -->
+  <property>
+    <name>hive.exec.scratchdir</name>
+    <value>/tmp/hive</value>
+  </property>
+
+  <property>
+    <name>hive.exec.local.scratchdir</name>
+    <value>/usr/local/hive/tmp/hive</value>
+    <description>Local scratch space for Hive jobs</description>
+  </property>
+
+  <property>
+    <name>hive.downloaded.resources.dir</name>
+    <value>/usr/local/hive/tmp/${hive.session.id}_resources</value>
+    <description>Temporary local directory for added resources in the remote file system.</description>
+  </property>
+
+  <property>
+    <name>hive.querylog.location</name>
+    <value>/usr/local/hive/tmp/hive</value>
+    <description>Location of Hive run time structured log file</description>
+  </property>
+
+  <property>
+    <name>hive.aux.jars.path</name>
+    <value>/usr/local/hive/lib,/usr/local/hive/jdbc</value>
+    <description>These JAR file are available to all users for all jobs。</description>
+  </property>
+  <property>
+    <name>hive.metastore.warehouse.dir</name>
+    <value>hdfs://192.168.10.126:9000/user/hive/warehouse</value>
+    <description>相对于fs.default.name有关的目录，管理表存储的位置</description>
+  </property>
+
+  <!--配置Hive Metastore-->
+  <property>
+    <name>javax.jdo.option.ConnectionURL</name>
+    <value>jdbc:mysql://localhost:3306/metastore?createDatabaseIfNotExist=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true</value>
+  </property>
+
+  <property>
+    <name>javax.jdo.option.ConnectionDriverName</name>
+    <value>com.mysql.jdbc.Driver</value>  //有些高版本的驱动需要在改成com.mysql.cj.jdbc.Driver
+  </property>
+
+  <property>
+    <name>javax.jdo.option.ConnectionUserName</name>
+    <value>root</value>
+  </property>
+
+  <property>
+    <name>javax.jdo.option.ConnectionPassword</name>
+    <value>Wjn@@123</value>   //这里是你mysql的密码
+  </property>
+
+  <!--配置hiveserver2主机(这里最好是配置ip地址，以便于从Windows连接)-->
+  <property>
+    <name>hive.server2.thrift.bind.host</name>
+    <value>192.168.10.126</value>
+    <description>Bind host on which to run the HiveServer2 Thrift service.</description>
+  </property>
+
+  <!--配置beeline远程客户端连接时的用户名和密码。这个用户名要在对应的hadoop的配置文件core-site.xml中也配置-->
+  <property>
+    <name>hive.server2.thrift.client.user</name>
+    <value>root</value>
+    <description>Username to use against thrift client. default is 'anonymous'</description>
+  </property>
+
+  <property>
+    <name>hive.server2.thrift.client.password</name>
+    <value>vagrant</value>    //这里是你主机用户的密码
+    <description>Password to use against thrift client. default is 'anonymous'</description>
+  </property>
+
+  <!-- 配置下面两个属性，可以配置 hive 2.x web ui -->
+  <property>
+    <name>hive.server2.webui.host</name>
+    <value>192.168.10.126</value>
+  </property>
+  <!-- 重启HiveServer2，访问http://172.16.212.17:10002/ -->
+
+
+  <property>
+    <name>hive.exec.mode.local.auto</name>
+    <value>true</value>
+  </property>
+
+
+  <property>
+    <name>mapreduce.map.memory.mb</name>
+    <value>4096</value>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.memory.mb</name>
+    <value>5120</value>
+  </property>
+
+  <property>
+    <name>hive.metastore.schema.verification</name>
+    <value>false</value>
+  </property>
+
+
+</configuration>

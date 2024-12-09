@@ -1,0 +1,1 @@
+* to use the 'ssh' connection type with passwords or pkcs11_provider, you must install the sshpass program

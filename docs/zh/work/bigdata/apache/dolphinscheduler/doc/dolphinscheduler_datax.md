@@ -1,0 +1,1 @@
+export DATAX_HOME=/usr/local/datax/bin/datax.py

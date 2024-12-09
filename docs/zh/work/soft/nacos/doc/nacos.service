@@ -1,0 +1,21 @@
+[Unit]
+Description=nacos
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+LimitNOFILE=100000
+LimitNPROC=65535
+LimitMEMLOCK=infinity
+WorkingDirectory=/usr/local/nacos
+ExecStart=/usr/bin/bash /usr/local/nacos/bin/startup.sh
+ExecStop=/usr/bin/bash /usr/local/nacos/bin/shutdown.sh
+PrivateTmp=true
+Restart=on-failure
+RestartSec=40
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

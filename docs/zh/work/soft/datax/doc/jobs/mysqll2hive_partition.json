@@ -1,0 +1,71 @@
+{
+    "job": {
+      "content": [
+        {
+          "reader": {
+            "name": "mysqlreader",
+            "parameter": {
+                "username": "root",
+                "password": "123456",
+                "column": [
+                    "dt_year",
+                    "user_name",
+                    "score",
+                    "director_add_time",
+                    "manager_add_time"
+                ],
+                "connection": [
+                    {
+                        "table": [
+                            "t_1"
+                        ],
+                        "jdbcUrl": [
+"jdbc:mysql://192.168.3.85:3307/cs?useSSL=false"
+                        ]
+                    }
+                ]
+            }
+          },
+          "writer": {
+            "name": "hdfswriter",
+            "parameter": {
+                "defaultFS": "hdfs://localhost:9000",
+                "fileType": "orc",
+                "path": "/user/hive/warehouse/t_1/dt=20230531",
+                "fileName": "demo",
+                "column": [
+                    {
+                        "name": "dt_year",
+                        "type": "VARCHAR"
+                    },
+                    {
+                        "name": "user_name",
+                        "type": "VARCHAR"
+                    },
+                    {
+                      "name": "score",
+                      "type": "int"
+                    },
+                    {
+                      "name": "director_add_time",
+                      "type": "VARCHAR"
+                    },
+                    {
+                      "name": "manager_add_time",
+                      "type": "VARCHAR"
+                    }
+                ],
+                "writeMode": "append",
+                "fieldDelimiter": "\t",
+                "compress":"NONE"
+            }
+          }
+        }
+      ],
+      "setting": {
+        "speed": {
+          "channel": 5
+         }
+      }
+    }
+  }

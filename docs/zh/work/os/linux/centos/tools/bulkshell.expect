@@ -1,0 +1,26 @@
+#!/usr/bin/expect
+
+set timeout 1
+
+#获取外界传递进来的ip参数
+set hostip [lindex $argv 0]
+
+#获取外界传递进来的用户名
+set username [lindex $argv 1]
+
+#获取外界传递进来的密码参数
+set passwd [lindex $argv 2]
+
+#获取外界传递进来的命令参数
+set cmd [lindex $argv 3]
+
+
+spawn ssh $username@$hostip -p 22
+expect {
+ "(yes/no)" { send "yes\r"; exp_continue }
+ "password:" { send "${passwd}\r" }
+}
+
+expect $username@* { send "$cmd\r" };
+expect $username@* { send exit\r };
+expect eof;

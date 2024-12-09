@@ -1,0 +1,1 @@
+https://docs.rocket.chat/deploy/deploy-rocket.chat/additional-deployment-methods/deploy-with-centos

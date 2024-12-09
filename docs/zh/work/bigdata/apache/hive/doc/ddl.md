@@ -1,0 +1,1 @@
+create table t_1 (name string) partitioned by (dt string) stored as orc; 
