@@ -2,90 +2,50 @@ import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
   "/zh/",
-  "/zh/portfolio",
-  "/zh/demo/",
+  // "/zh/portfolio",
+  // "/zh/demo/",
   {
     text: "阅读",
-    icon: "lightbulb",
+    icon: "book",
     prefix: "/zh/reading/",
     children: [
-      "zootopia/"
+      {
+        text: "文学",
+        children: [
+          "zootopia/"
+        ]
+      },
+      {
+        text: "哲学",
+        children: [
+          "哲学100问/"
+        ]
+      },
     ]
   },
   {
     text: "工作",
-    icon: "lightbulb",
+    icon: "desktop",
     prefix: "/zh/work/",
     children: [
-      {
-        text: "软件",
-        icon: "lightbulb",
-        prefix: "soft/",
-        children: [
-          "docker/", "datax/"
-        ],
-      },
-      {
-        text: "大数据",
-        icon: "lightbulb",
-        prefix: "bigdata/",
-        children: [
-          {
-            text: "apache",
-            icon: "lightbulb",
-            link: "apache/"
-          }
-        ],
-      },
-
-
-      {
-        text: "人工智能",
-        icon: "lightbulb",
-        prefix: "ai/",
-        children: [
-          {
-            text: "apache",
-            icon: "lightbulb",
-            link: "apache/"
-          }
-        ],
-      },
-      {
-        text: "数据库",
-        icon: "lightbulb",
-        prefix: "database/",
-        children: [
-          {
-            text: "apache",
-            icon: "lightbulb",
-            link: "apache/"
-          }
-        ],
-      },
-      {
-        text: "编程语言",
-        icon: "lightbulb",
-        prefix: "database/",
-        children: [
-          {
-            text: "apache",
-            icon: "lightbulb",
-            link: "apache/"
-          }
-        ],
-      },
-      {
-        text: "操作系统",
-        icon: "lightbulb",
-        prefix: "os/",
-        children: [
-          "linux/", "windows/"
-        ],
-      },
-      
-
+      "soft/",
+      "os/",
+      "database/",
+      "bigdata/"
     ],
+  },
+  {
+    text: "框架",
+    prefix: "zh/frame/",
+    children: [
+      {
+        text: "前端",
+        prefix: "front/",
+        children: [
+          "vuepress-theme-hope/"
+        ]
+      }
+    ]
   },
   // {
   //   text: "指南",

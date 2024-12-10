@@ -1,6 +1,6 @@
 ---
 title: Juddy Hopps
-icon: lightbulb
+icon: bookmark
 ---
 
 ## Judy Hopps

@@ -1,5 +1,5 @@
 ---
-title: 大数据
+title: nginx
 icon: lightbulb
 ---
 

@@ -1,6 +1,7 @@
 ---
-title: java
+title: ddl
 icon: lightbulb
 ---
 
-<Catalog />
+
+

@@ -1,0 +1,19 @@
+[Unit]
+Description=redis
+After=network.target
+ConditionPathExists=/opt/third/redis/conf/redis.conf
+
+[Service]
+Type=forking
+PIDFile=/data/redis/redis.pid
+User=templateUser
+Group=templateUser
+ExecStart=/opt/third/redis/bin/redis-server /opt/third/redis/conf/redis.conf
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+Restart=on-failure
+RestartSec=40
+
+[Install]
+WantedBy=multi-user.target
