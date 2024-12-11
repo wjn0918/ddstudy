@@ -1,6 +1,5 @@
 ---
-title: kerberos
-icon: lightbulb
+title: Kerberos
 ---
 
 ```

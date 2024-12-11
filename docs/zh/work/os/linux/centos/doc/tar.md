@@ -1,1 +1,0 @@
-tar --exclude='*/*' -tf xx.tar.gz

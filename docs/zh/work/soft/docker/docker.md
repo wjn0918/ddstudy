@@ -1,6 +1,5 @@
 ---
 title: docker使用
-icon: circle-info
 ---
 
 # 执行sql

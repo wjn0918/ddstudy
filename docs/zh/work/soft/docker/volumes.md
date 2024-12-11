@@ -1,6 +1,5 @@
 ---
 title: volumes
-icon: circle-info
 ---
 
 

@@ -1,6 +1,5 @@
 ---
-title: postgresql
-icon: lightbulb
+title: Postgresql
 ---
 <Catalog />
 

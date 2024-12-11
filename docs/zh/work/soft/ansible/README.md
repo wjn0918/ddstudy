@@ -1,6 +1,5 @@
 ---
-title: ansible
-icon: lightbulb
+title: Ansible
 ---
 
 ansible --version 

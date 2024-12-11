@@ -1,6 +1,5 @@
 ---
 title: other
-icon: lightbulb
 ---
 
 | soft         | comment              | link                                         |

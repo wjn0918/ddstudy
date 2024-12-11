@@ -1,6 +1,5 @@
 ---
 title: 安装docker
-icon: docker
 ---
 
 ## 离线安装

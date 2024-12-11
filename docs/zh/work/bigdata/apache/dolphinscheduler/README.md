@@ -1,6 +1,5 @@
 ---
-title: dolphinscheduler
-icon: lightbulb
+title: Dolphinscheduler
 ---
 
 执行策略

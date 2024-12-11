@@ -1,6 +1,5 @@
 ---
 title: miniconda
-icon: lightbulb
 ---
 
 - 下载安装脚本

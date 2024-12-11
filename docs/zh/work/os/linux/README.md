@@ -1,7 +1,5 @@
 ---
-title: linux
-icon: lightbulb
+title: Linux
 ---
 
-- [ubuntu](ubuntu/)
-- [centos](centos/)
+<Catalog />

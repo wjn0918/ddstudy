@@ -1,6 +1,5 @@
 ---
 title: Q&A
-icon: circle-info
 ---
 
 * Unknown option overlay2.override_kernel_check: devicemapper

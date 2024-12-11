@@ -1,6 +1,5 @@
 ---
 title: network
-icon: circle-info
 ---
 
 ## 容器间访问

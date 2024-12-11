@@ -1,6 +1,5 @@
 ---
 title: vagrant
-icon: lightbulb
 ---
 
 

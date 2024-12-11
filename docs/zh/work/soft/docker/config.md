@@ -1,6 +1,5 @@
 ---
 title: docker 配置
-icon: circle-info
 ---
 
 

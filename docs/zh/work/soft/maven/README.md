@@ -1,6 +1,5 @@
 ---
-title: maven
-icon: lightbulb
+title: Maven
 ---
 
 mvn clean install -T 1C -Dmaven.test.skip=true -Dmaven.compile.fork=true

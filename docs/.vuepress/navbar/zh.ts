@@ -2,6 +2,7 @@ import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
   "/zh/",
+  // "/zh/cookbook",
   // "/zh/portfolio",
   // "/zh/demo/",
   {
@@ -31,7 +32,8 @@ export const zhNavbar = navbar([
       "soft/",
       "os/",
       "database/",
-      "bigdata/"
+      "bigdata/",
+      "laguage/"
     ],
   },
   {

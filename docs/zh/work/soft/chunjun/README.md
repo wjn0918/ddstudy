@@ -1,4 +1,3 @@
 ---
 title: chunjun
-icon: lightbulb
 ---

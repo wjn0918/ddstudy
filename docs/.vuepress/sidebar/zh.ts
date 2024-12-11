@@ -7,6 +7,8 @@ export const zhSidebar = sidebar({
 
 
   "/zh/work/soft/":"structure",
+  "/zh/work/database/":"structure",
+  "/zh/work/bigdata/":"structure",
 
   
   // "/zh/work/soft":[
