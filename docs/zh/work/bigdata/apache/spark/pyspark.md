@@ -1,4 +1,55 @@
-# udf
+---
+title: PySpark
+---
+
+
+
+
+
+## 表结构定义
+
+
+```
+schema = "id int, name string, age int"
+```
+
+::: tabs
+
+@tab mock
+
+```
+data = [[1, "张三", 12],[2, "李四", 14]]
+spark.createDataFrame(data,schema).show()
+```
+
+@tab csv
+
+```
+spark.read.schema(schema).csv('data.csv').show()
+```
+
+:::
+
+## Row
+
+A row in DataFrame. The fields in it can be accessed:
+
+- like attributes (row.key)
+
+- like dictionary values (row[key])
+
+```
+from pyspark.sql import Row
+r1 = Row(name='zs', age=12)
+r1.name
+r1['name']
+```
+
+
+
+
+
+
 
 ## 递归查询子元素
 

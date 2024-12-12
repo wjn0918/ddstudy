@@ -22,6 +22,7 @@ export const zhNavbar = navbar([
           "哲学100问/"
         ]
       },
+      "Words"
     ]
   },
   {
@@ -47,6 +48,13 @@ export const zhNavbar = navbar([
           "vuepress-theme-hope/"
         ]
       }
+    ]
+  },
+  {
+    text: "人工智能",
+    prefix: "zh/ai/",
+    children: [
+      'prompt'
     ]
   },
   // {

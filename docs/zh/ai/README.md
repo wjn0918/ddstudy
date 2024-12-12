@@ -8,12 +8,28 @@ icon: lightbulb
 
 | 项目                                                                                      | 说明 |
 | ----------------------------------------------------------------------------------------- | ---- |
-| [Langchain-chatchat](https://github.com/chatchat-space/Langchain-Chatchat)                |      |
+| [Langchain-chatchat](https://github.com/chatchat-space/Langchain-Chatchat)                | 可离线部署的 RAG 与 Agent 应用项目 |
 | [torchkeras](https://github.com/lyhue1991/torchkeras)                                     |      |
 | [transformers-stream-generator](https://github.com/LowinLi/transformers-stream-generator) |      |
 
 
 
+## Xinference
+
+::: warning
+
+> 为避免依赖冲突，请将 Langchain-Chatchat 和模型部署框架如 Xinference 等放在不同的 Python 虚拟环境中, 比如 conda, venv, virtualenv 等。
+
+
+:::
+
+```
+pip install "xinference[transformers]"
+```
+
+```
+xinference-local --host 0.0.0.0 --port 9997
+```
 
 
 
@@ -35,7 +51,7 @@ pip install -r requirements.txt  --use-pep517
 
 
 
-# NLP 
+## NLP 
 
 
 https://github.com/HqWu-HITCS/Awesome-Chinese-LLM
