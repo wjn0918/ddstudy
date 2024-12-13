@@ -47,6 +47,13 @@ export const zhNavbar = navbar([
         children: [
           "vuepress-theme-hope/"
         ]
+      },
+      {
+        text: "数据分析",
+        prefix: "data/",
+        children: [
+          "pandas/"
+        ]
       }
     ]
   },
@@ -54,6 +61,13 @@ export const zhNavbar = navbar([
     text: "人工智能",
     prefix: "zh/ai/",
     children: [
+      {
+        text: "框架",
+        prefix: "frame/",
+        children: [
+          'Xinference'
+        ]
+      },
       'prompt'
     ]
   },

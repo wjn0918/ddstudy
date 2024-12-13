@@ -1,3 +1,32 @@
+---
+title: pandas
+---
+
+## 分组
+
+
+## [case when](https://pandas.pydata.org/docs/reference/api/pandas.Series.case_when.html)
+
+2.2.0版本后
+
+```
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame(np.arange(10).reshape(10,1), columns=['id'])
+df['cs'] = "Unknown"
+df['cs'].case_when([
+    (df.eval("id < 3"),10),
+    (df.eval("3 <= id < 6"), 20),
+    (df.eval(" id >= 6"), 30)
+    
+    ]
+)
+```
+
+
+
+```
 # 更改数据格式
 
  df.astype(str)
@@ -85,22 +114,9 @@ print(grouped)
 
 r[['column1', 'column2']] = df.apply(lambda x: cs(x)).to_list()
 
-# case_when 2.2.0
 
-```
-import pandas as pd
-import numpy as np
 
-df = pd.DataFrame(np.arange(10).reshape(10,1), columns=['id'])
-df['cs'] = "Unknown"
-df['cs'].case_when([
-    (df.eval("id < 3"),10),
-    (df.eval("3 <= id < 6"), 20),
-    (df.eval(" id >= 6"), 30)
-    
-    ]
-)
-```
+
 
 
 # 根据某列生成重复数据
@@ -133,5 +149,7 @@ df2 = pd.concat(df.apply(cs, axis=1).tolist())
 df2.reset_index(drop=True, inplace=True)
 
 print(df2)
+
+```
 
 ```

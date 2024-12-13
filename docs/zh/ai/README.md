@@ -14,22 +14,7 @@ icon: lightbulb
 
 
 
-## Xinference
 
-::: warning
-
-> 为避免依赖冲突，请将 Langchain-Chatchat 和模型部署框架如 Xinference 等放在不同的 Python 虚拟环境中, 比如 conda, venv, virtualenv 等。
-
-
-:::
-
-```
-pip install "xinference[transformers]"
-```
-
-```
-xinference-local --host 0.0.0.0 --port 9997
-```
 
 
 

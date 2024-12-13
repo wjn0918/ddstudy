@@ -20,3 +20,5 @@ icon: bookmark
 | fast-talking           | 油嘴滑舌                            |                                                                       |
 | scam-artist            | 骗子艺术家 诡计多端的               |                                                                       |
 | mystery                | 谜团                                |even if it means partnering with a fast-talking, scam-artist named Nick to solve th mystery|
+
+Juddy Hopps is a thoughtful, idealistic, and true-blue bunny, She believes that in Zootopia, anyone can be anything and her big dream is to become a ZPD officer, However, when she moves to the big city, she discovers that being the first bunny on a police force isn't easy. Determined to prove herself, Judy jumps at the opportunity to crack a case, even if it means partnering with a fast-talking, scam-artist named Nick to solve the mystery.

@@ -4,7 +4,7 @@ export const zhSidebar = sidebar({
   "/zh/reading/zootopia/":"structure",
   "/zh/reading/哲学100问/":"structure",
 
-
+  "/zh/ai/":"structure",
 
   "/zh/work/soft/":"structure",
   "/zh/work/database/":"structure",

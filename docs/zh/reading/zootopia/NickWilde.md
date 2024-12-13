@@ -18,6 +18,9 @@ icon: bookmark
 | bunny                                                                        | 兔子                                           |                                                                                                                  |
 | dumb                                                                         | 木讷                                           | all dunnies are dumb                                                                                             |
 | cop                                                                          | 警官                                           |                                                                                                                  |
-| outsmarts                                                                    | 比..还机灵                                     | but when an idelistic rabiit cop named Juddy Hopps outsmarts him                                                 |
+| outsmarts                                                                    | 比..还机灵                                     | but when an idelistic rabbit cop named Juddy Hopps outsmarts him                                                 |
 | actually                                                                     | 渐渐的、不知不觉的                             | he finds himself actually helping her solve a mystery |
 |                                                                              |                                                |                                                                                                                  |
+
+Nick Wilde is small-time, con-artist fox, He's charming and clever and always quick with a joke. He's an unrepentant realist and believes you are what you are, no matter how hard you try to overcome your label. To him, all solths are slow, all weasels are weaselly, and all bunnies are dumb,
+But when an idealistic rabbit cop named Juddy Hopps outsmarts him, he finds himself actually helping her solve a mystery.
