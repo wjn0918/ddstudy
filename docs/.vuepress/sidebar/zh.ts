@@ -10,6 +10,8 @@ export const zhSidebar = sidebar({
   "/zh/work/database/":"structure",
   "/zh/work/bigdata/":"structure",
 
+  "/zh/focus/":"structure",
+
   
   // "/zh/work/soft":[
   //   {

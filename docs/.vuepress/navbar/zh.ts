@@ -71,6 +71,13 @@ export const zhNavbar = navbar([
       'prompt'
     ]
   },
+  {
+    text: "focus",
+    prefix: "zh/focus/",
+    children: [
+      'English'
+    ]
+  },
   // {
   //   text: "指南",
   //   icon: "lightbulb",
