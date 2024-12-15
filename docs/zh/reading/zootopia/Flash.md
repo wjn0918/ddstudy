@@ -3,7 +3,7 @@ title: Flash
 icon: bookmark
 ---
 
-| workd                 | comment                                        | link                                                                |
+| word                 | comment                                        | link                                                                |
 | --------------------- | ---------------------------------------------- | ------------------------------------------------------------------- |
 | flash                 | 闪电                                           |                                                                     |
 | DMV                   | 车辆管理局                                     | flash is the fastes solth working at the DMV                        |

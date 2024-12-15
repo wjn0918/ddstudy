@@ -6,7 +6,7 @@ icon: bookmark
 ## Judy Hopps
 
 
-| workd                  | comment                             | link                                                                  |
+| word                  | comment                             | link                                                                  |
 | ---------------------- | ----------------------------------- | --------------------------------------------------------------------- |
 | anyone can be anything | 一切皆有可能                        | this is zootopia, and anyone can be anything                          |
 | thoughtful             | 心思缜密的                          |                                                                       |
