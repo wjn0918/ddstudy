@@ -12,6 +12,12 @@ icon: lightbulb
 yum install -y java-1.8.0-openjdk.x86_64 java-1.8.0-openjdk-demo  java-1.8.0-openjdk-devel java-1.8.0-openjdk-javadoc
 ```
 
+@tab ubuntu
+
+```
+sudo apt install -y openjdk-8-jdk
+```
+
 @tab 其他
 
 :::

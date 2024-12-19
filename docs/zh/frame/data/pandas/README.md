@@ -2,6 +2,36 @@
 title: pandas
 ---
 
+## Dataframe
+
+### 重命名
+
+
+```
+
+df = pd.DataFrame({"A": [1, 2, 3], "B": [4, 5, 6]})
+df.rename(columns={"A": "a", "B": "c"})
+```
+
+
+## [Input/Output](https://pandas.pydata.org/docs/reference/io.html)
+
+### SQL
+
+#### [read_sql_table](https://pandas.pydata.org/docs/reference/api/pandas.read_sql_table.html#pandas.read_sql_table)
+
+```
+with engine.connect() as connection:
+    result = connection.execute(text("select dwmc from t_cs"))
+    for row in result:
+        print("username:", row.dwmc)
+```
+
+
+
+
+
+
 ## 分组
 
 

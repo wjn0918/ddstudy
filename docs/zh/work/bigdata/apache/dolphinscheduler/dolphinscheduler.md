@@ -248,6 +248,13 @@ WHERE a.parent_task_instance_id = b.task_instance_id;
 ```
 
 
+```
+DELETE FROM t_ds_process_instance;
+DELETE FROM t_ds_task_instance;
+DELETE FROM t_ds_relation_process_instance;
+```
+
+
 
 :::
 

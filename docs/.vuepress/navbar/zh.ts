@@ -54,7 +54,29 @@ export const zhNavbar = navbar([
         children: [
           "pandas/"
         ]
-      }
+      },
+      {
+        text: "ORM",
+        prefix: "orm/",
+        children: [
+          "sqlalchemy/"
+        ]
+      },
+      {
+        text: "Web",
+        prefix: "web/",
+        children: [
+          "SpringBoot"
+        ]
+      },
+      {
+        text: "gui",
+        prefix: "gui/",
+        children: [
+          "tkinter-designer"
+        ]
+      },
+      
     ]
   },
   {
@@ -66,6 +88,7 @@ export const zhNavbar = navbar([
         prefix: "frame/",
         children: [
           'Xinference'
+          ,"Langchain-chatchat"
         ]
       },
       'prompt'

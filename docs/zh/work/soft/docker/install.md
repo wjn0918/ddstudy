@@ -31,28 +31,31 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ```
 
 
-@tab centos
-
-- 下载docker rpm包
-
-```
-yum install -y docker-ce --downloadonly --downloaddir=./
-```
+@tab Kylin 麒麟
 
 
-- 安装
+
+# [Binaries安装](https://docs.docker.com/engine/install/binaries/#install-static-binaries)
+
+
 
 ```
-for item in `ls`; do rpm -Uvh ${item} --force --nodeps; done
+wget https://download.docker.com/linux/static/stable/x86_64/docker-26.1.4.tgz
+tar -xzvf docker-26.1.4.tgz
+sudo cp docker/* /usr/bin/
 ```
+### [docker-compose](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually)
 
+```
+DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.32.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 
+chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+```
 
 
 :::
-
-
-
 
 
 

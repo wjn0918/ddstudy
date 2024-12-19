@@ -115,3 +115,35 @@ icon: lightbulb
 "/zh/reading/demo/":"structure",
 "/zh/reading/zootopia/":"structure",
 ```
+
+
+## MarkDown
+### [导入文件](https://theme-hope.vuejs.press/zh/guide/markdown/content/include.html#%E9%85%8D%E7%BD%AE)
+
+- 配置
+
+```
+import { defineUserConfig } from "vuepress";
+import { hopeTheme } from "vuepress-theme-hope";
+
+export default defineUserConfig({
+  theme: hopeTheme({
+    markdown: {
+      include: true,
+    },
+  }),
+});
+```
+
+- 语法
+
+使用 `<!-- @include: filename -->` 导入文件。
+
+如果要部分导入文件，你可以指定导入的行数
+
+`<!-- @include: filename{start-end} -->`
+`<!-- @include: filename{start-} -->`
+`<!-- @include: filename{-end} -->`
+同时你也可以导入文件区域:
+
+`<!-- @include: filename#region -->`

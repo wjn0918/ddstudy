@@ -43,16 +43,27 @@ rsync可以在两个目录之间同步数据，并且可以非常高效地处理
 
 @tab Ubuntu
 
+```
 ufw status
 
 ufw allow 22
 
+```
 
 @tab Centos
 
-<!-- tab 2 内容 -->
+### 添加端口
 
-<!-- 👇 tab 3 将会被默认激活 -->
+```
+
+firewall-cmd --permanent --add-port=4000/tcp \
+&& systemctl restart firewalld
+```
+### 删除端口
+
+```
+firewall-cmd --zone=public --remove-port=443/tcp --permanent \
+```
 
 
 :::
@@ -247,3 +258,98 @@ usermod -G groupName userName
 ## 查看压缩包内容
 
 tar --exclude='*/*/*' -tf packages/grafana-enterprise-10.3.1.linux-amd64.tar.gz
+
+
+## vi 使用
+
+1,$ 或%   全局替换
+
+## ntp
+
+
+**主服务器停止了，注意重启后关闭防火墙，其他服务器需要先停止ntpd服务后手动同步一次，后再重启服务**
+```
+systemctl stop ntpd
+ntpdate ip-192.168.10.190.fd.com
+systemctl start ntpd
+```
+systemctl stop ntpd && ntpdate ip-192.168.10.190.fd.com && systemctl start ntpd
+
+
+
+在集群的所有服务器上安装ntp服务，用于集群时钟同步
+> yum -y install ntp
+
+将ntpd加入系统自启动服务并设置开机启动
+
+* 服务端
+
+    > vim /etc/ntp.conf
+
+    添加
+```
+# local clock
+server 127.127.1.0
+fudge  127.127.1.0 stratum 10
+```
+
+    注释掉所有的server
+
+![image](../imgs/ntp_server.png)
+
+* 客户端
+
+    添加
+    
+        server 服务端地址(ip-192.168.10.190.fd.com) iburst
+
+
+![image](../imgs/ntp_client.png)
+
+* 手动同步一次时间
+
+> /usr/sbin/ntpdate ip-192.168.10.190.fd.com
+
+* 重启集群所有节点的ntpd服务
+
+> systemctl restart ntpd
+
+验证时钟同步，在所有节点执行
+
+> ntpq -p
+
+有“*”显示则表示同步成功。**需要等会**
+
+
+## 配置静态IP
+
+::: tabs
+@tab Ubuntu
+
+```
+cd /etc/netplan
+vi 
+
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    enp0s5:   # 网卡名称
+      dhcp4: no     # 关闭dhcp
+      dhcp6: no
+      addresses: [10.211.55.10/24]  # 静态ip
+      gateway4: 10.211.55.1     # 网关
+      nameservers:
+        addresses: [8.8.8.8, 114.114.114.114] #dns
+
+
+sudo netplan apply
+```
+
+:::
+
+## 设置hostname
+
+```
+hostnamectl --static set-hostname hostname
+```

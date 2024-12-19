@@ -30,3 +30,10 @@ baseurl=file:///data/yumiso
 enabled=1
 gpgcheck=0
 ```
+
+
+## yum
+
+```
+yum install <softName> --downloadonly --downloaddir=/home/docker
+```

@@ -2,6 +2,30 @@
 title: docker使用
 ---
 
+
+## 镜像发布到阿里云
+
+
+1. 登录阿里云Docker Registry
+```
+docker login --username=wjn_0918 registry.cn-hangzhou.aliyuncs.com
+```
+2. 从Registry中拉取镜像
+```
+docker pull registry.cn-hangzhou.aliyuncs.com/wjn0918/soft:[镜像版本号]
+```
+3. 将镜像推送到Registry
+```
+docker login --username=wjn_0918 registry.cn-hangzhou.aliyuncs.com
+```
+```
+docker tag eb175b0743cc registry.cn-hangzhou.aliyuncs.com/wjn0918/soft:mysql-5.7.39
+```
+```
+docker push registry.cn-hangzhou.aliyuncs.com/wjn0918/soft:[镜像版本号]
+```
+
+
 # 执行sql
 
 ```

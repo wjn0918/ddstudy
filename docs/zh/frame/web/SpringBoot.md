@@ -1,7 +1,19 @@
 ---
-title: spring boot
-icon: lightbulb
+title: SpringBoot
 ---
+
+## 指定配置文件
+
+:::tabs
+
+@tab IDEA
+
+Environment variable
+
+spring.profiles.active=prod
+
+
+:::
 
 
 ## 文件读取
