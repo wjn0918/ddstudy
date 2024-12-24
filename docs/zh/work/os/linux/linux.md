@@ -56,8 +56,7 @@ ufw allow 22
 
 ```
 
-firewall-cmd --permanent --add-port=4000/tcp \
-&& systemctl restart firewalld
+firewall-cmd --permanent --add-port=4000/tcp && systemctl restart firewalld
 ```
 ### 删除端口
 
@@ -353,3 +352,8 @@ sudo netplan apply
 ```
 hostnamectl --static set-hostname hostname
 ```
+
+
+## 添加路由
+
+route add -host 192.168.8.65 gw 10.10.3.254

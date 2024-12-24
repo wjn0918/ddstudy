@@ -26,7 +26,7 @@ docker push registry.cn-hangzhou.aliyuncs.com/wjn0918/soft:[镜像版本号]
 ```
 
 
-# 执行sql
+## 执行sql
 
 ```
 docker exec -i mysql sh -c 'exec mysql -uroot -pMysql@2024 ' <<C 
@@ -35,18 +35,18 @@ docker exec -i mysql sh -c 'exec mysql -uroot -pMysql@2024 ' <<C
 
 ```
 
-# 保存image
+## 保存image
 
 docker save zhaoolee-qs:1.0 > qs01.tar
 docker load -i qso1.tar
 
 
-# root用户登录 
+## root用户登录 
 
 docker exec -u 0 -it 
 
 
-# 指定网络模式
+## 指定网络模式
 
 容器与主机共享网络栈。这意味着容器将使用主机的IP地址和端口，而不是为容器单独分配的IP地址和端口
 network_mode: "host"

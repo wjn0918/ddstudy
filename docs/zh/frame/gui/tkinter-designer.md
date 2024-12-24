@@ -2,7 +2,7 @@
 title: Tkinter-Designer
 ---
 
-
+基于figma自动生成tkinter gui
 
 ## 安装
 
@@ -32,6 +32,19 @@ pip install urllib3==1.25.8
 ## 使用
 
 首先，创建一个框架作为您的 Tkinter 窗口。
+
+
+### 支持的命名
+
+| figma元素名称 | Tkinter元素 |
+| ------------- | ----------- |
+| Button        | Button      |
+| Line          | Line        |
+| Rectangle     | Rectangle   |
+| TextArea      | Text Area   |
+| TextBox       | Entry       |
+| Image         | Canvas.Image() |
+
 
 ### 添加图片
 

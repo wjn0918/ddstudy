@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rough.js Pie Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/roughjs@4.3.1/bundled/rough.min.js"></script>
+</head>
+<body>
+  <canvas id="pieChart" width="400" height="400"></canvas>
+
+  <script>
+    // 数据集（每个部分的比例）
+    const data = [30, 70, 45, 55]; // 百分比值
+    const colors = ['red', 'blue', 'green', 'orange']; // 每部分的颜色
+
+    // 初始化 Rough.js
+    const canvas = document.getElementById('pieChart');
+    const rc = rough.canvas(canvas);
+
+    // 中心点和半径
+    const centerX = 200;
+    const centerY = 200;
+    const radius = 100;
+
+    // 转换为弧度的函数
+    const toRadians = (degree) => (degree * Math.PI) / 180;
+
+    // 计算总和和开始角度
+    const total = data.reduce((a, b) => a + b, 0);
+    let startAngle = 0;
+
+    // 绘制饼状图每一部分
+    data.forEach((value, index) => {
+      const angle = (value / total) * 360; // 每部分的角度
+      const endAngle = startAngle + angle;
+
+      // 圆弧的终点坐标
+      const x1 = centerX + radius * Math.cos(toRadians(startAngle));
+      const y1 = centerY + radius * Math.sin(toRadians(startAngle));
+      const x2 = centerX + radius * Math.cos(toRadians(endAngle));
+      const y2 = centerY + radius * Math.sin(toRadians(endAngle));
+
+      // 创建路径
+      const path = `M ${centerX} ${centerY} L ${x1} ${y1} A ${radius} ${radius} 0 ${angle > 180 ? 1 : 0} 1 ${x2} ${y2} Z`;
+
+      // 填充区域
+      rc.path(path, {
+        fill: colors[index],
+        stroke: 'black',
+        strokeWidth: 1,
+        roughness: 2,
+      });
+
+      startAngle = endAngle; // 更新起始角度
+    });
+  </script>
+</body>
+</html>

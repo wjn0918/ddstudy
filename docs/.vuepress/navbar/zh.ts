@@ -73,6 +73,7 @@ export const zhNavbar = navbar([
         text: "gui",
         prefix: "gui/",
         children: [
+          "tkinter",
           "tkinter-designer"
         ]
       },
