@@ -77,7 +77,20 @@ export default hopeTheme({
     gfm: true,
     imgLazyload: true,
     imgSize: true,
-    include: true,
+    // include: true,
+    
+    include: {
+      resolvePath: (file) => {
+        // 添加 `@src` 别名支持
+        if (file.startsWith("@src"))
+          return file.replace("@src", path.resolve(__dirname, ".."));
+
+        if (file.startsWith("@docker"))
+          return file.replace("@docker", path.resolve(__dirname, "../zh/work/soft/docker"));
+
+        return file;
+      },
+    },
     mark: true,
     spoiler: true,
     footnote: true,
