@@ -1,3 +1,19 @@
+---
+title: 使用
+---
+## 多行写入文件
+
+```
+cat >> filename <<EOF
+
+内容
+
+EOF
+
+
+```
+
+
 # sed 
 
 sed -i 's|http://localhost|http://127.0.0.1|g' cs.txt

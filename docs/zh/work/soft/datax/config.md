@@ -2,6 +2,10 @@
 title: 配置
 ---
 
+## 更改日志级别
+```
+python bin/datax.py --loglevel debug job/
+```
 
 
 当提升DataX Job内Channel并发数时，调整JVM heap参数，原因如下：

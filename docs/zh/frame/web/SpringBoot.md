@@ -242,3 +242,50 @@ public class SchedulerTask {
 }
 ```
 定时任务类SechedulerTask增加了@EnableAsync注解，开启了异步事件支持。同时，在定时方法上增加@Async注解，使任务能够异步执行，这样各个后台任务就不会阻塞。
+
+
+## IO
+### Calling REST Services
+#### [RestTemplate](https://docs.spring.io/spring-boot/docs/2.7.18/reference/html/io.html#io.rest-client)
+
+- 依赖
+
+```
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+                <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.14</version>
+        </dependency>
+```
+
+- RestTemplate 实例
+
+```
+package org.example.hello.springboot;
+
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class MyService {
+
+    private final RestTemplate restTemplate;
+
+    public MyService(RestTemplateBuilder restTemplateBuilder) {
+        this.restTemplate = restTemplateBuilder.build();
+    }
+
+    public String hello() {
+        ResponseEntity<Detail> entity = this.restTemplate.getForEntity("http://localhost:8081/api/base/hello", Detail.class);
+        Detail re = entity.getBody();
+        return re.toString();
+    }
+}
+
+```

@@ -2,7 +2,10 @@
 title: Ansible
 ---
 
-
+## 配置文件
+```
+<!-- @include: ansible.cfg -->
+```
 
 ansible --version 
 查看配置文件是否配置成功
