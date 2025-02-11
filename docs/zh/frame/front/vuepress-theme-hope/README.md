@@ -3,6 +3,16 @@ title: vuepress-theme-hope
 icon: lightbulb
 ---
 
+## [创建项目](https://theme-hope.vuejs.press/zh/guide/intro/install.html)
+
+```
+npm init vuepress-theme-hope@latest add [dir]
+```
+
+
+
+
+
 ## [github pages](https://theme-hope.vuejs.press/zh/get-started/deploy.html#%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE)
 
 ::: important

@@ -1,3 +1,29 @@
+---
+title: SparkSql
+---
+
+
+## 通过java bean 进行查询
+
+```
+@Data
+@FieldNameConstants
+class Person{
+    private String name;
+
+}
+
+
+Field[] fields = Person.Fields.class.getFields();
+List<String> collect = Arrays.stream(fields).map(field -> {
+    return field.getName();
+}).collect(Collectors.toList());
+
+df.selectExpr(collect.toArray(new String[0])).show();
+
+
+```
+
 
 ## 日期格式化
 

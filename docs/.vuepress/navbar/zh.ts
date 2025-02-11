@@ -45,6 +45,7 @@ export const zhNavbar = navbar([
         text: "前端",
         prefix: "front/",
         children: [
+          "vuepress2/",
           "vuepress-theme-hope/"
         ]
       },
