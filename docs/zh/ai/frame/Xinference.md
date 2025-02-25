@@ -40,7 +40,10 @@ pip install "xinference[all]"
 :::
 
 
+## 设置
 
+XINFERENCE_HOME=/tmp/xinference  # 存储位置
+XINFERENCE_MODEL_SRC=modelscope # 指定模型下载网站
 
 
 ## 使用

@@ -115,3 +115,11 @@ demo.launch()
 
 
 https://github.com/QwenLM/Qwen/issues/604
+
+
+## error
+
+ImportError: cannot import name 'TypeIs' from 'typing_extensions'
+
+
+pip install typing_extensions==4.12.0

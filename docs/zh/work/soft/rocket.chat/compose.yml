@@ -1,0 +1,32 @@
+# https://docs.rocket.chat/docs/deploy-with-docker-docker-compose#step-2-fetch-the-compose-file
+
+version: '3.7'
+
+services:
+    mongo:
+      image: registry.cn-hangzhou.aliyuncs.com/wjn0918/soft:mogo-5.0
+      container_name: mongo
+      restart: always
+      networks:
+        - chat
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: 123456
+      volumes:
+        - ./mongo_data:/data/db
+
+    rocket.chat:
+      image: registry.cn-hangzhou.aliyuncs.com/wjn0918/soft:rocket.chat
+      restart: always
+      container_name: rocket.chat
+      networks:
+        - chat
+      ports:
+        - "91:3000"
+      environment:
+        MONGO_OPLOG_URL: mongodb://root:123456@mongo:27017/local?authSource=admin
+        MONGO_URL: mongodb://root:123456@mongo:27017/chat1?authSource=admin
+      privileged: true
+
+networks:
+  chat:
