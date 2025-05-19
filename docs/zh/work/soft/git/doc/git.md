@@ -1,3 +1,19 @@
+
+
+
+
+## 彻底清除git所有历史提交记录使其为“新”库
+```
+
+git checkout --orphan latest_branch
+git add -A
+git commit -m 'init'
+git branch -D main
+git branch -m main
+git push -f origin main
+```
+
+
 # 
 另一个分支的所有代码变动
 git merge  
