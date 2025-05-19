@@ -42,6 +42,6 @@ jobs:
           username: 'root'
           server: 'catpd.cn'
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: './*'
+          local_path: 'docs/.vuepress/dist/*'
           remote_path: '/tmp/cs'
           sftpArgs: '-o ConnectTimeout=5'
