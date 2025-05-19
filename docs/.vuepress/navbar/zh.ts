@@ -114,7 +114,7 @@ export const zhNavbar = navbar([
         text: "高项",
         prefix: "高项/",
         children: [
-          "案例", "计算", "论文/","论文_ly/"
+          "案例", "计算", "论文/","论文_ly/", "考点"
         ]
       }
     ]

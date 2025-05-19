@@ -2,6 +2,14 @@
 title: 通用
 ---
 
+## ssh 私钥登录
+
+```
+ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
+
 ## 常用命令
 ```
 ls -l | more   # 查看文件夹

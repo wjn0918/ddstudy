@@ -3,6 +3,18 @@ title: 配置
 icon: gear
 ---
 
+## 镜像
+
+```
+vim /etc/yum.repos.d/nginx.repo
+[nginx1]
+name=nginx1
+baseurl=http://mirrors.ustc.edu.cn/nginx/mainline/centos/$releasever/$basearch/
+gpgcheck=0
+enabled=1
+module_hotfixes=true
+ 
+```
 
 ## 开机自启
 
