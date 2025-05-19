@@ -1,0 +1,1 @@
+如果在Intellij IDEA中运行程序时遇到java.lang.NoClassDefFoundError报错，这是因为没有把依赖的类都加载进来。在Intellij IDEA中单击“Run”->“Edit configurations...”，在“Use classpath of module”选项上选择当前工程，并且勾选“Include dependencies with‘Provided’Scope”

@@ -1,0 +1,22 @@
+[Unit]
+Description=zookeeper.service
+After=network.target
+ConditionPathExists=/opt/third/zookeeper/conf/zoo.cfg
+
+[Service]
+Type=forking
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/third/jdk/bin"
+User=templateUser
+Group=templateUser
+LimitNOFILE=100000
+LimitNPROC=65535
+LimitMEMLOCK=infinity
+ExecStart=/opt/third/zookeeper/bin/zkServer.sh start
+ExecStop=/opt/third/zookeeper/bin/zkServer.sh stop
+PrivateTmp=true
+Restart=on-failure
+RestartSec=40
+
+[Install]
+WantedBy=multi-user.target
+

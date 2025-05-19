@@ -1,0 +1,15 @@
+version: '3'
+services:
+  hbase:
+    image: harisekhon/hbase
+    container_name: hbase-container
+    ports:
+      - "16010:16010"
+      - "9090:9090"
+      - "2181:2181"
+    networks:
+      - hbase-network
+
+networks:
+  hbase-network:
+    driver: bridge

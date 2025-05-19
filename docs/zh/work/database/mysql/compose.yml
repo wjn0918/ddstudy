@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  mysql:
+    hostname: mysql
+    container_name: school-mysql
+    image: registry.cn-hangzhou.aliyuncs.com/wjn0918/soft:mysql-8.0.41
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./conf:/etc/mysql
+      - ./data:/var/lib/mysql
+      - ./logs:/var/log/mysql
+    privileged: true
+    environment:
+      - MYSQL_ROOT_PASSWORD="Mysql@2024"

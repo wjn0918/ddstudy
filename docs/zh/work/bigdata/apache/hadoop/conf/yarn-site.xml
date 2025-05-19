@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+<configuration>
+  <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value>master.demo</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.env-whitelist</name>
+    <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_HOME,PATH,LANG,TZ,HADOOP_MAPRED_HOME</value>
+  </property>
+  <property>
+    <name>yarn.log.server.url</name>
+    <value>http://192.168.33.10:19888/jobhistory/logs</value>
+  </property>
+  <property>
+    <name>yarn.log-aggregation-enable</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>2048</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.resource.cpu-vcores</name>
+    <value>8</value>
+  </property>
+
+
+
+
+<property>
+        <name>yarn.resourcemanager.recovery.enabled</name>
+       <!--默认值为false，也就是说resourcemanager挂了相应的正在运行的任务在rm恢复后不能重新启动-->
+        <value>true</value>
+</property>
+
+<property>
+        <name>yarn.resourcemanager.store.class</name>
+        <!--此版本的rmstate信息存放主要有两种，一种是FileSystemRMStateStore,另一种是MemoryRMStateStore，还有一种目前较为主流的是zkstore-->                     
+        <value>org.apache.hadoop.yarn.server.resourcemanager.recovery.FileSystemRMStateStore</value>
+</property>
+
+<property>
+        <name>yarn.resourcemanager.fs.state-store.uri</name>
+       <!--此处配置为hdfs存储状态信息，还可以配置为存放在本地路径，之所以存放在hdfs上是考虑都如果rm节点完全挂掉，还可以在其他节点上启动rm直接读取hdfs信息，如果放在本地文件系统上还需要进行状态信息的同步。-->
+        <value>file://${hadoop.tmp.dir}/yarn/system/rmstore</value>
+ </property>
+
+
+ <property>
+        <name>yarn.log-aggregation-enable</name>
+        <value>true</value>
+ </property>
+
+</configuration>
+
