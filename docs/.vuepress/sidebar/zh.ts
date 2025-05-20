@@ -16,7 +16,7 @@ export const zhSidebar = sidebar({
   "/zh/focus/高项/":[
     {
       text: "高项",
-      children: ["论文/","案例", "计算"],
+      children: ["考点", "计算", "论文/","论文_ly/"],
     },
   ],
 
