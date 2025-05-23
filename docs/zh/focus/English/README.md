@@ -2,6 +2,7 @@
 title: English
 ---
 
+[方法论](https://github.com/byoungd/English-level-up-tips)
 
 ## picture Book
 

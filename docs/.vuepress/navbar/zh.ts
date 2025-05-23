@@ -110,6 +110,7 @@ export const zhNavbar = navbar([
     prefix: "/zh/focus/",
     children: [
       'English/',
+      'hellogithub',
       {
         text: "高项",
         prefix: "高项/",
