@@ -19,7 +19,9 @@
     "vuepress-theme-hope": "2.0.0-rc.61"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.7",
     "@vue-office/excel": "^1.7.14",
+    "tailwindcss": "^4.1.7",
     "vue-demi": "^0.14.6"
   }
 }

@@ -1,6 +1,17 @@
 ---
 title: pandas
 ---
+## 生成指定数量的状态
+
+```
+fault_count = 87
+kx_count = 5122
+# 控制故障状态
+zt_list = ['故障'] * fault_count + ['空闲中'] * kx_count + ['作业中'] * (df.shape[0] - fault_count - kx_count) 
+np.random.shuffle(zt_list)
+df['zt'] = zt_list
+```
+
 
 ## 重命名列
 

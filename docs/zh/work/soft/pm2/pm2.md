@@ -1,8 +1,33 @@
-# install 
+## install 
+
+## use
 
 
+```
+
+module.exports = {
+  apps: [
+    {
+      name: 'datavData',
+      script: 'uvicorn',
+      args: 'main:app --host 0.0.0.0 --port 5003',
+      cwd: '/usr/local/ly/bi',
+      interpreter: 'python3'
+    }
+  ]
+}
+```
+
+```
+pm2 start ecosystem.config.js
+````
 
 
+新增app
+
+```
+pm2 reload ecosystem.config.js
+```
 
 
 # spark
@@ -20,3 +45,11 @@ pm2 logs spark
 # nacos
 
 pm2 start '/usr/local/nacos/bin/startup.sh' --name nacos
+
+## Q&A
+
+importlib.metadata.PackageNotFoundError: No package metadata was found for gyp
+
+```
+export PATH="/home/miniconda3/bin:$PATH"
+```
