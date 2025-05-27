@@ -1,1 +1,13 @@
 // place your custom styles here
+.poem {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    line-height: 2;
+    white-space: pre-line;
+    margin: 2rem 0;
+    background: #fdfcfb;
+    padding: 2rem;
+    border-left: 5px solid #c0a060;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }

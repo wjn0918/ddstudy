@@ -1,11 +1,8 @@
 import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
-  // "/zh/cookbook",
-  // "/zh/portfolio",
-  // "/zh/demo/",
   {
-    text: "阅读",
+    text: "阅读篇",
     icon: "book",
     prefix: "/zh/reading/",
     children: [
@@ -21,11 +18,17 @@ export const zhNavbar = navbar([
           "哲学100问/"
         ]
       },
+      {
+        text: "诗歌",
+        children: [
+          "poem/"
+        ]
+      },
       "Words"
     ]
   },
   {
-    text: "工作",
+    text: "工作篇",
     icon: "desktop",
     prefix: "/zh/work/",
     children: [
@@ -33,80 +36,27 @@ export const zhNavbar = navbar([
       "os/",
       "database/",
       "bigdata/",
-      "language/"
+      "language/",
+      {
+        text: "前端框架",
+        prefix: "frame/",
+        children: [
+          "front/vuepress2/",
+          "front/vuepress-theme-hope/",
+        ],
+      },
+      {
+        text: "认证框架",
+        prefix: "frame/",
+        children: [
+          "auth/logto/",
+        ],
+      },
     ],
   },
   "/zh/life/",
   {
-    text: "框架",
-    prefix: "zh/frame/",
-    children: [
-      {
-        text: "前端",
-        prefix: "front/",
-        children: [
-          "vuepress2/",
-          "vuepress-theme-hope/"
-        ]
-      },
-      {
-        text: "数据分析",
-        prefix: "data/",
-        children: [
-          "pandas/"
-        ]
-      },
-      {
-        text: "ORM",
-        prefix: "orm/",
-        children: [
-          "sqlalchemy/"
-        ]
-      },
-      {
-        text: "Web",
-        prefix: "web/",
-        children: [
-          "SpringBoot"
-        ]
-      },
-      {
-        text: "gui",
-        prefix: "gui/",
-        children: [
-          "tkinter",
-          "tkinter-designer"
-        ]
-      },
-      
-    ]
-  },
-  {
-    text: "人工智能",
-    prefix: "zh/ai/",
-    children: [
-      {
-        text: "框架",
-        prefix: "frame/",
-        children: [
-          'Xinference'
-          ,"Langchain-chatchat"
-        ]
-      },
-      {
-        text: "audio",
-        prefix: "audio/",
-        children: [
-          'FunASR'
-        ]
-      },
-      'prompt',
-      'cursor/'
-      
-    ]
-  },
-  {
-    text: "focus",
+    text: "聚焦篇",
     prefix: "/zh/focus/",
     children: [
       'English/',
@@ -115,34 +65,9 @@ export const zhNavbar = navbar([
         text: "高项",
         prefix: "高项/",
         children: [
-          "考点", "计算", "论文/","论文_ly/"
+          "考点", "计算", "论文/", "论文_ly/"
         ]
       }
     ]
   },
- 
-  // {
-  //   text: "指南",
-  //   icon: "lightbulb",
-  //   prefix: "/zh/guide/",
-  //   children: [
-  //     {
-  //       text: "Bar",
-  //       icon: "lightbulb",
-  //       prefix: "bar/",
-  //       children: ["baz", { text: "...", icon: "ellipsis", link: "" }],
-  //     },
-  //     {
-  //       text: "Foo",
-  //       icon: "lightbulb",
-  //       prefix: "foo/",
-  //       children: ["ray", { text: "...", icon: "ellipsis", link: "" }],
-  //     },
-  //   ],
-  // },
-  // {
-  //   text: "V2 文档",
-  //   icon: "book",
-  //   link: "https://theme-hope.vuejs.press/zh/",
-  // },
 ]);
