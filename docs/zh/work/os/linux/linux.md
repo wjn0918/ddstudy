@@ -2,6 +2,10 @@
 title: 通用
 ---
 
+## atop  查看历史运行情况
+
+atop -r /var/log/atop/atop_20250529 -b 09:00
+
 ## ssh 私钥登录
 
 ```

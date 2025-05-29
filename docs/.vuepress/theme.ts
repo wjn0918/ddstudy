@@ -49,6 +49,7 @@ export default hopeTheme({
     config: {
       "/demo/encrypt.html": ["1234"],
       "/zh/demo/encrypt.html": ["1234"],
+      "/ME.html": ["1234"]
     },
   },
 
