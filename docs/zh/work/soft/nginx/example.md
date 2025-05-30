@@ -2,6 +2,28 @@
 title: 案例
 icon: lightbulb
 ---
+## 代理vite 
+
+base: '/easybd',
+
+```
+
+server {
+  listen 80;
+
+  server_name localhost;
+
+ location /easybd {
+    alias /usr/share/nginx/html;
+    index  index.html index.htm;
+    #若不配置try_files，刷新会404
+    try_files $uri $uri/ /easybd/index.html; # 注意这里需要加上base路径
+  }
+
+}
+
+```
+
 
 ## 代理vue
 
@@ -36,7 +58,9 @@ server {
 
 ```
 
-## 代理pgsql
+## 代理数据库
+:::tabs
+@tab pgsql
 
 ```
 # 需要放在nginx.conf 最后
@@ -57,7 +81,7 @@ stream {
 }
 ```
 
-## 代理mysql
+@tab mysql
 
 ```
 #user  nobody;
@@ -138,6 +162,8 @@ stream {
 
 
 ```
+
+:::
 
 ## 代理目录
 

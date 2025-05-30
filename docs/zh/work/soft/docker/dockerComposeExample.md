@@ -1,6 +1,42 @@
 ---
 title: docker compose
 ---
+
+## 使用dockercompose 直接build 
+
+docker compose up --build
+
+```
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: easybd-api
+    ports:
+      - "5001:5001"
+    networks:
+      - easybd-network
+
+  frontend:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: easybd-frontend
+    ports:
+      - "3000:80"
+    networks:
+      - easybd-network
+    depends_on:
+      - backend
+
+networks:
+  easybd-network:
+    driver: bridge
+
+```
+
+
 ## 案例
 
 ### datax
