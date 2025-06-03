@@ -38,31 +38,45 @@ Response r = gson.fromJson(content, type);
 
 ## idea 创建scala
 
+添加scala-library 依赖
+
+```
+ <dependency>
+    <groupId>org.scala-lang</groupId>
+    <artifactId>scala-library</artifactId>
+    <version>2.13.10</version>
+</dependency>
+```
+
 需要添加scala编译插件
 
 ```
-<plugin>
-    <groupId>net.alchim31.maven</groupId>
-    <artifactId>scala-maven-plugin</artifactId>
-    <version>3.1.4</version>
-    <executions>
-        <execution>
-            <id>scala-compile-first</id>
-            <phase>process-resources</phase>
-            <goals>
-                <goal>add-source</goal>
-                <goal>compile</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>scala-test-compile</id>
-            <phase>process-test-resources</phase>
-            <goals>
-                <goal>testCompile</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
+<build>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.1.4</version>
+                <executions>
+                    <execution>
+                        <id>scala-compile-first</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>scala-test-compile</id>
+                        <phase>process-test-resources</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 ```
 
 
