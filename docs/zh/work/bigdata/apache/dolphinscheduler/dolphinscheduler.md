@@ -2,6 +2,12 @@
 title: 使用
 ---
 
+
+## [资源中心](https://dolphinscheduler.apache.org/zh-cn/docs/3.1.6/guide/resource/configuration)
+
+
+
+
 ## [元数据文档](https://www.bookstack.cn/read/dolphinscheduler-1.3.6-zh/471679)
 
 

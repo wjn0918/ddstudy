@@ -1,6 +1,92 @@
 ---
 title: js
 ---
+## 数组过滤排序
+
+```
+const adcode = "11"; // 测试用，可以是 "", "11", 或 "1101"
+
+const new_data = data
+  .filter(item => {
+    if (adcode.length === 0) return item.cj === 0;
+    if (adcode.length === 2) return item.cj === 1;
+    if (adcode.length === 4) return item.cj === 2;
+    return false;
+  })
+  .sort((a, b) => b.mj - a.mj);
+
+console.log(new_data);
+```
+
+## 数组计算
+```
+const data = [
+  {
+    "code": "",
+    "name": "全国",
+    "zt": "作业中",
+    "sl": 36143
+  },
+  {
+    "code": "",
+    "name": "全国",
+    "zt": "空闲中",
+    "sl": 5122
+  },
+  {
+    "code": "",
+    "name": "全国",
+    "zt": "故障",
+    "sl": 87
+  }
+];
+
+const total = data.reduce((sum, item) => sum + item.sl, 0);
+
+console.log(total); // 输出: 41352
+```
+
+
+## 数组更改key
+
+```
+const data = [
+  {
+    "code": "00",
+    "name": "全国",
+    "mj": 25590.88
+  }
+];
+
+const newData = data.map(({ mj, ...rest }) => ({
+  ...rest,
+  value: mj
+}));
+
+console.log(newData);
+```
+
+
+## 数组过滤
+
+```
+const data = [
+  {id: 1, value: "22145"},
+  {id: 2, value: "12345"},
+  {id: 3, value: "22000"},
+  {id: 4, value: "22567"},
+  {id: 5, value: "11111"}
+];
+
+const filteredData = data.filter(item => item.value.startsWith("22"));
+```
+
+## 两个数组过滤
+
+```
+const namesToFilter = new Set(array2.map(item => item.name));
+const filtered3 = array1.filter(item => namesToFilter.has(item.name));
+```
 
 ## 两个数组关联
 ```
