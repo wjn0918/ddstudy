@@ -37,28 +37,16 @@ export const zhNavbar = navbar([
       "database/",
       "bigdata/",
       "language/",
-      {
-        text: "前端框架",
-        prefix: "frame/",
-        children: [
-          "front/vuepress2/",
-          "front/vuepress-theme-hope/",
-        ],
-      },
-      {
-        text: "认证框架",
-        prefix: "frame/",
-        children: [
-          "auth/logto/",
-        ],
-      },
+      "frame/",
     ],
   },
   "/zh/life/",
+  "/zh/tools/",
   {
     text: "聚焦篇",
     prefix: "/zh/focus/",
     children: [
+      'stock/',
       'English/',
       'hellogithub',
       {

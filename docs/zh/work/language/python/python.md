@@ -25,7 +25,12 @@ pip install py-roughviz
 
 
 
+## 注解
+### 内置缓存
 
+```
+@lru_cache()
+```
 
 
 ## 显式指定数据类型

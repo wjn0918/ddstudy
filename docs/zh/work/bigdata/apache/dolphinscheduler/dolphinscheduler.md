@@ -2,6 +2,9 @@
 title: 使用
 ---
 
+## pm2
+
+pm2 start '/usr/local/apache-dolphinscheduler-3.1.6-bin/bin/start-all.sh' --name dolphinscheduler
 
 ## [资源中心](https://dolphinscheduler.apache.org/zh-cn/docs/3.1.6/guide/resource/configuration)
 

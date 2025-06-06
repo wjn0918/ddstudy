@@ -1,6 +1,16 @@
 ---
 title: pandas
 ---
+
+## 过滤
+
+### [多条件过滤](https://pandas.pydata.org/docs/user_guide/indexing.html#setting-with-enlargement-conditionally-using-numpy)
+
+```
+r[(r['board'] == '主板') & (r['stock_type'] == '主板')]
+```
+
+
 ## 生成指定数量的状态
 
 ```
@@ -22,16 +32,16 @@ df.rename(columns={'A': 'a', 'B': 'b'}, inplace=True)
  df.astype(str)
 
 
-# 随机数
+## 随机数
 
 data['B_repair_score'] = np.random.randint(0, 30, size=n)
 
-# 排序
+## 排序
 
 df_sorted = df_filtered.sort_values(by='asset_score', ascending=True)
 
 
-# mysql
+## mysql
 
 ```
 import pandas as pd 
@@ -49,7 +59,7 @@ data
 ```
 
 
-# How to Calculate a Difference Between Two Dates
+## How to Calculate a Difference Between Two Dates
 
 天
 
@@ -64,24 +74,24 @@ data
 
 
 
-# in / not in
+## in / not in
 
 Series.isin(['1','2'])
 
 ~Series.isin(['1','2'])
 
 
-# group by apply 后取group by 字段
+## group by apply 后取group by 字段
 
 def cs(item:pd.DataFrame):
     group_by = item.name
 
 
-# group by 
+## group by 
 
 df.groupby('资产管理类别名称').apply(lambda data: data['数量'].sum(), include_groups=False)
 
-# group by 多列
+## group by 多列
 
 ```
 
@@ -103,11 +113,11 @@ grouped = df.groupby(['部门', '城市']).sum()
 print(grouped)
 ```
 
-# apply 返回多列
+## apply 返回多列
 
 r[['column1', 'column2']] = df.apply(lambda x: cs(x)).to_list()
 
-# case_when 2.2.0
+## case_when 2.2.0
 
 ```
 import pandas as pd
@@ -125,7 +135,7 @@ df['cs'].case_when([
 ```
 
 
-# 根据某列生成重复数据
+## 根据某列生成重复数据
 
 ```
 import pandas as pd
