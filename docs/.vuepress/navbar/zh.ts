@@ -40,8 +40,6 @@ export const zhNavbar = navbar([
       "frame/",
     ],
   },
-  "/zh/life/",
-  "/zh/tools/",
   {
     text: "聚焦篇",
     prefix: "/zh/focus/",
@@ -58,5 +56,20 @@ export const zhNavbar = navbar([
       }
     ]
   },
+  {
+    text: "教学篇",
+    prefix: "/zh/teaching/",
+    children: [
+      {
+        text: "软件",
+        prefix: "soft/",
+        children: [
+          "DataV/"
+        ]
+      }
+    ]
+  },
+  "/zh/life/",
+  "/zh/tools/",
   "/ME",
 ]);
