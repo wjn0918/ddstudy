@@ -1,5 +1,12 @@
 
 
+## 移除已经跟踪的文件
+
+```
+git rm --cached package-lock.json
+
+.gitignore 中添加 package-lock.json
+```
 
 
 ## 彻底清除git所有历史提交记录使其为“新”库

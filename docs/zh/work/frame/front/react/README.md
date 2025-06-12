@@ -12,6 +12,11 @@ npm create vite@latest web --template react-ts
 npm create vite@latest web -- --template react-ts
 ```
 
+```
+npm install --save-dev @types/node
+```
+
+
 
 ## 项目结构
 
