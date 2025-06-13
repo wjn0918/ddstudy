@@ -44,6 +44,7 @@ export const zhNavbar = navbar([
     text: "聚焦篇",
     prefix: "/zh/focus/",
     children: [
+      'ue5/',
       'stock/',
       'English/',
       'hellogithub',

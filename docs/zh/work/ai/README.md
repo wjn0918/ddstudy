@@ -3,6 +3,8 @@ title: AI
 ---
 
 
+https://www.cherry-ai.com/download
+
 模型
 
 | 类型 | 厂商   | 模型 |
